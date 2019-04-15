@@ -18,11 +18,11 @@ layout: base
             {% for badge in page.gh-badge %}
               {% case badge %}
                 {% when 'star'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
                 {% when 'watch'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=watch&v=2&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=watch&v=2&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
                 {% when 'fork'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
                 {% when 'follow'%}
                   <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
               {% endcase %}
@@ -30,6 +30,10 @@ layout: base
           {% endif %}
         </div>
       {% endif %}
+
+      <div class="in-post-navigation-links" style="">
+        <a href="#the-goal">The Goal</a> - <a href="#the-journey">The Journey</a> - <a href="#key-learnings">Key Learnings</a> - <a href="#end-result">End Result</a> - <a href="#useful-links">Useful Links</a>
+      </div>
 
       <article role="main" class="blog-post">
         {{ content }}
@@ -64,6 +68,9 @@ layout: base
         </li>
         {% endif %}
       </ul>
+
+      <p class="copyright-notice">The writing on this blog is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a>.</p>
+      <p class="copyright-notice">Some images are used under license from their respective copyright owners. This blog's license does not replace copyrights and licenses that apply to those images.</p>
 
       {% if page.comments %}
         <div class="disqus-comments">

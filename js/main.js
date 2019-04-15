@@ -66,6 +66,11 @@ var main = {
 
     // show the big header image
     main.initImgs();
+
+    // Open all external links in a new window
+    $('a').filter(function() {
+      return this.hostname && this.hostname !== location.hostname;
+    }).attr("target","_blank");
   },
 
   initImgs : function() {

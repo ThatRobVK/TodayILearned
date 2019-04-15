@@ -4,6 +4,35 @@ layout: null
 
 @import url("pygment_highlights.css");
 
+/* --- Added by Rob VK --- */
+.in-post-navigation-links {
+  width:100%;
+  text-align:center;
+}
+
+.um-actually {
+  padding: 15px 15px 15px 10px;
+  margin: 20px 20px 20px 5px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 5px 3px 3px 5px;
+  background-color: #fdf5d4;
+  border-left-color: #f1c40f;
+}
+
+.um-actually:before {
+  content: "Um, actually... ";
+  font-family: 'Allan';
+  font-size: 24px;
+}
+
+.copyright-notice {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #999;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
 /* --- General --- */
 
 body {
@@ -741,6 +770,21 @@ td.gutter {
 .box-success {
   background-color: #98FB98;
   border-left-color: #3CB371;
+}
+
+.um-actually {
+  padding: 15px 15px 15px 10px;
+  margin: 20px 20px 20px 5px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 5px 3px 3px 5px;
+  background-color: #fdf5d4;
+  border-left-color: #f1c40f;
+}
+
+.um-actually strong {
+  font-family: 'Allan';
+  font-size: 36px;
 }
 
 /* Fix table border github gist snippets */

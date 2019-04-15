@@ -17,22 +17,20 @@ baseurl: ""
 title: Today I Learned
 
 # Short description of your site
-description: Let's learn a bit about every tech on the planet!
+description: Let's learn a bit about every technology out there!
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-    - GitHub Pages: "https://pages.github.com/"
-  Author's home: "http://deanattali.com"
+  Blog: "index.html"
+  Tags: "tags/"
+  About this Blog: "about/"
+  About Me: "https://www.robvk.uk/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/avatar-icon.png"
+avatar: "/img/til_greybg.jpg"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
@@ -64,7 +62,8 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Robert van Kooten
+  name: That Rob VK
+  twitter: ThatRobVK
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -72,23 +71,25 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
-  email: "someone@example.com"
+#  email: "th@robvk.uk"
 #  facebook: daattali
   github: ThatRobVK
   twitter: ThatRobVK
 #  reddit: yourname
 #  google-plus: +DeanAttali
-#  linkedin: daattali
+  linkedin: robertvankootenuk
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
 #  instagram: deanat78
-#  youtube: user/deanat78
+  youtube: channel/UCXKT8PNbQ91vhIp2ATxgdqQ
 #  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
 #  twitch: yourname
 #  yelp: yourname
+#  vimeo: ThatRobVK
+  slideshare: RobertvanKooten1
 
 # Select which share links to show in posts
 share-links-active:
@@ -96,6 +97,8 @@ share-links-active:
   facebook: true
   google: false
   linkedin: true
+  youtube: true
+  slideshare: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
@@ -132,15 +135,15 @@ url-pretty: "til.robvk.uk"  # eg. "deanattali.com/beautiful-jekyll"
 # fb_comment_id: ""
 
 # Staticman support
-staticman:
-  repository : "thatrobvk/todayilearned" # GitHub username/repository eg. "daattali/beautiful-jekyll"
-  branch     : "master" # eg. "master" If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
-  endpoint   : "" # URL of your own deployment (with trailing slash) (will fallback to a public GitLab instance)
-  reCaptcha:
-    # reCaptcha for Staticman (OPTIONAL)
-    # If you use reCaptcha, you must also set these parameters in staticman.yml
-    siteKey  : # Use your own site key, you need to apply for one on Google
-    secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
+#staticman:
+#  repository : "thatrobvk/todayilearned" # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  branch     : "master" # eg. "master" If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
+#  endpoint   : "" # URL of your own deployment (with trailing slash) (will fallback to a public GitLab instance)
+#  reCaptcha:
+#    # reCaptcha for Staticman (OPTIONAL)
+#    # If you use reCaptcha, you must also set these parameters in staticman.yml
+#    siteKey  : # Use your own site key, you need to apply for one on Google
+#    secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
 
 # --- Misc --- #
 
@@ -161,7 +164,7 @@ title-separator: "-"
 timezone: "America/Vancouver"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /:year/:month/:day/:title/
 paginate: 5
 
 kramdown:
@@ -175,7 +178,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      comments: true  # add comments to all blog posts
+      comments: false  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
   -
     scope:
@@ -197,58 +200,6 @@ exclude:
   - LICENSE
   - README.md
   - Vagrantfile
-
-# prose.io config
-prose:
-  rooturl: '_posts'
-  media: 'img'
-  ignore:
-    - 404.html
-    - LICENSE
-    - feed.xml
-    - _config.yml
-    - /_layouts
-    - /_includes
-    - /css
-    - /img
-    - /js
-  metadata:
-    _posts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "post"
-      - name: "title"
-        field:
-          element: "text"
-          label: "Post title"
-          placeholder: "Title"
-          alterable: true
-      - name: "subtitle"
-        field:
-          element: "textarea"
-          label: "Subtitle"
-          placeholder: "A description of your post."
-          alterable: true
-      - name: "date"
-        field:
-          element: "text"
-          label: "Date"
-          help: "Enter date of post."
-          placeholder: "yyyy-mm-dd"
-          alterable: true
-      - name: "image"
-        field:
-          element: "text"
-          label: "Image"
-          help: "Add a thumbnail image to your post."
-          placeholder: "Thumbnail"
-          alterable: true
-      - name: "published"
-        field:
-          element: "checkbox"
-          label: "Publish"
-          help: "Check to publish post, uncheck to hide."
 
 plugins:
   - jekyll-paginate
